@@ -43,3 +43,5 @@ public class LineAdapter extends DrawPanelController implements IPlotter
         return "LineAdapter";
     }
 }
+
+//3.2.2 Przetestowane - rysuje w odpowiednim oknie koperte
