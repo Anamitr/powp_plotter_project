@@ -42,7 +42,7 @@ public class LinePlotterAdapter implements IPlotter
     @Override
     public String toString()
     {
-        return "LineAdapter";
+        return "LinePlotterAdapter";
     }
 }
 
