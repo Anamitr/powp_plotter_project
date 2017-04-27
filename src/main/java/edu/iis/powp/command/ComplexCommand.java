@@ -21,3 +21,5 @@ public class ComplexCommand extends ArrayList<PlotterCommand> implements Plotter
 		}		
 	}
 }
+
+// 3.1.3 Występuje wzorzec kompozyt, którym jest klasa ComplexCommand
