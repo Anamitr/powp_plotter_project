@@ -1,7 +1,7 @@
 package edu.iis.powp.command;
 
 public class DrawSquareCommandFactory {
-	public ComplexCommand create() {
+	public static ComplexCommand create() {
 		ComplexCommand complexCommand = new ComplexCommand();
 		complexCommand.add(new CommandSetPosition(0,0));
 		complexCommand.add(new CommandDrawLineToPosition(30,0));
