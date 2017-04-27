@@ -13,8 +13,8 @@ import edu.iis.powp.app.Application;
 import edu.iis.powp.app.Context;
 import edu.iis.powp.app.DriverManager;
 import edu.iis.powp.appext.ApplicationWithDrawer;
-import edu.iis.powp.command.ComplexCommand;
 import edu.iis.powp.command.DrawSquareCommandFactory;
+import edu.iis.powp.command.DrawTriangleCommandFactory;
 import edu.iis.powp.command.SelectTestFigureOptionWithCommandsListener;
 import edu.iis.powp.events.predefine.SelectChangeVisibleOptionListener;
 import edu.iis.powp.events.predefine.SelectTestFigureOptionListener;
@@ -35,11 +35,15 @@ public class TestPlotSoftPatterns
 	private static void setupPresetTests(Context context) {
 	    SelectTestFigureOptionListener selectTestFigureOptionListener = new SelectTestFigureOptionListener("Figure Joe 1");
 	    SelectTestFigureOptionListener selectTestFigureOptionListener2 = new SelectTestFigureOptionListener("Figure Joe 2");
-	    SelectTestFigureOptionWithCommandsListener selectTestFigureOptionWithCommandsListener = new SelectTestFigureOptionWithCommandsListener(DrawSquareCommandFactory.create());
+	    SelectTestFigureOptionWithCommandsListener selectTestFigureOptionWithCommandsListener =
+	    		new SelectTestFigureOptionWithCommandsListener(DrawSquareCommandFactory.create(-40,-20, 200));
+	    SelectTestFigureOptionWithCommandsListener selectTestFigureOptionWithCommandsListener2 =
+	    		new SelectTestFigureOptionWithCommandsListener(DrawTriangleCommandFactory.create());
 		
 		context.addTest("Figure Joe 1", selectTestFigureOptionListener);
 		context.addTest("Figure Joe 2", selectTestFigureOptionListener2);
 		context.addTest("Square", selectTestFigureOptionWithCommandsListener);
+		context.addTest("Triangle", selectTestFigureOptionWithCommandsListener2);
 	}
 
 	/**

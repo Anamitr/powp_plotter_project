@@ -1,13 +1,13 @@
 package edu.iis.powp.command;
 
 public class DrawSquareCommandFactory {
-	public static ComplexCommand create() {
+	public static ComplexCommand create(int startX, int startY, int size) {
 		ComplexCommand complexCommand = new ComplexCommand();
-		complexCommand.add(new CommandSetPosition(0,0));
-		complexCommand.add(new CommandDrawLineToPosition(30,0));
-		complexCommand.add(new CommandDrawLineToPosition(30,30));
-		complexCommand.add(new CommandDrawLineToPosition(0,30));
-		complexCommand.add(new CommandDrawLineToPosition(0,0));
+		complexCommand.add(new CommandSetPosition(startX,startY));
+		complexCommand.add(new CommandDrawLineToPosition(startX + size,startY));
+		complexCommand.add(new CommandDrawLineToPosition(startX + size,startY + size));
+		complexCommand.add(new CommandDrawLineToPosition(startX,startY + size));
+		complexCommand.add(new CommandDrawLineToPosition(startX,startY));
 		
 		return complexCommand;
 	}
